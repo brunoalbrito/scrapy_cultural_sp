@@ -1,0 +1,18 @@
+1º Usar modo shell 
+scrapy shell http://www.viradaculturalpaulista.sp.gov.br/virada-cultural-paulista/
+
+2º Utilizar seletores 
+from scrapy.selector import Selector
+sel = Selector(response)
+
+3º Aplicar xpath
+sel.xpath("//div[@class='list-cities']//ul/li/a")
+
+4º Extrair conteudos
+sel.xpath("//div[@class='list-cities']//ul/li/a").extract()
+
+--Pegar texto apresentado para o usuário
+sel.xpath("//div[@class='list-cities']//ul/li/a/text()").extract()
+
+--Pegar os links relacionados a tag
+sel.xpath("//div[@class='list-cities']//ul/li/a/@href").extract()

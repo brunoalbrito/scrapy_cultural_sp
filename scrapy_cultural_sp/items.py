@@ -7,8 +7,14 @@
 
 import scrapy
 
-
-class ScrapyCulturalSpItem(scrapy.Item):
+#O parenteses indica herança
+class Atracao(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    cidade = scrapy.Field()
+    endereco = scrapy.Field()
+    dia = scrapy.Field()
+    hora = scrapy.Field()
+    artista = scrapy.Field()
+    
+    #pass
